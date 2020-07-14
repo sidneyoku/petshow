@@ -57,9 +57,9 @@ public class UIUtils {
         return builder.create();
     }
 
-    public static android.app.AlertDialog createDialogSuporte(final Context context, int title, int positiveLabel, DialogInterface.OnClickListener positiveListener,
+    public static AlertDialog createDialogSuporte(final Context context, int title, int positiveLabel, DialogInterface.OnClickListener positiveListener,
                                                               int negativeLabel, DialogInterface.OnClickListener negativeListener, final CharSequence[] opcaoPedido) {
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
         TextView txtTitle = new TextView(context);
         txtTitle.setText(title);

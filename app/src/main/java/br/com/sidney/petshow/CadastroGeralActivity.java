@@ -14,7 +14,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,7 +24,6 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,13 +31,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import br.com.sidney.petshow.adapter.CadastroPetAdapter;
 import br.com.sidney.petshow.entity.Pet;
-import br.com.sidney.petshow.utils.StringUtils;
 import br.com.sidney.petshow.utils.UIUtils;
 
 /**
@@ -193,7 +188,7 @@ public class CadastroGeralActivity extends AppCompatActivity implements ActionMo
     public boolean onPrepareActionMode(ActionMode mode, Menu menu) { return false; }
 
     @Override
-    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+    public boolean onActionItemClicked(final ActionMode mode, MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.act_global_edit) {
@@ -210,16 +205,16 @@ public class CadastroGeralActivity extends AppCompatActivity implements ActionMo
             return true;
 
         } else if (id == R.id.act_global_delete) {
+            final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
             DialogInterface.OnClickListener positiveListener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
 
                     for (Pet p : listSelectedPet) {
-//                        DAO.getCadastroGeralDAO(getApplicationContext()).excluir(c.getId());
+                        databaseReference.child(user.getUid()).child("memoria").child(p.getId()).removeValue();
                     }
-
-                    listSelectedPet = new ArrayList<>();
 
                     carregarDados();
 
@@ -229,6 +224,8 @@ public class CadastroGeralActivity extends AppCompatActivity implements ActionMo
                         View view = listView.getChildAt(i);
                         view.setBackgroundColor(Color.TRANSPARENT);
                     }
+
+                    mode.finish();
                 }
             };
 
@@ -240,12 +237,12 @@ public class CadastroGeralActivity extends AppCompatActivity implements ActionMo
                 }
             };
 
-            AlertDialog dialog = UIUtils.createDialog(getApplicationContext(),
+            AlertDialog dialog = UIUtils.createDialog(this,
                     R.string.txt_excluir, R.string.msg_excluir,
                     R.string.txt_sim, positiveListener, R.string.txt_nao,
                     negativeListener);
             dialog.show();
-            mode.finish();
+
             return true;
         }
 
@@ -270,11 +267,12 @@ public class CadastroGeralActivity extends AppCompatActivity implements ActionMo
     }
 
     private void carregarDados() {
-        adapter.clear();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         databaseReference.child(user.getUid()).child("memoria").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                listPet = new ArrayList<>();
+                adapter.clear();
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     Pet pet = postSnapshot.getValue(Pet.class);
                     listPet.add(pet);

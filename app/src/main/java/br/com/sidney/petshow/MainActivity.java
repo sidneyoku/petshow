@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             };
 
-            android.app.AlertDialog dialog = UIUtils.createDialogSuporte(this, R.string.dlg_title_suporte,
+            AlertDialog dialog = UIUtils.createDialogSuporte(this, R.string.dlg_title_suporte,
                     R.string.txt_sim, positiveListener, R.string.txt_nao, negativeListener, opcaoPedido);
             dialog.show();
             return true;
