@@ -13,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_baseline_pets"
+        android:icon="@mipmap/ic_petshow"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_petshow"
         android:supportsRtl="true"
