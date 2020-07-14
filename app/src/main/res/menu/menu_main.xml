@@ -1,0 +1,26 @@
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+
+        <item
+            android:id="@+id/menu_item_main_sobre"
+            android:title="@string/title_action_sobre"
+            app:showAsAction="ifRoom">
+            <menu>
+                <item
+                    android:id="@+id/submenu_item_main_manual"
+                    android:title="@string/sub_title_action_manual"
+                    app:showAsAction="withText|ifRoom" />
+                <item
+                    android:id="@+id/submenu_item_main_suporte"
+                    android:title="@string/sub_title_action_suporte"
+                    app:showAsAction="withText|ifRoom" />
+                <item
+                    android:id="@+id/submenu_item_main_versao"
+                    android:title="@string/sub_title_action_versao"
+                    app:showAsAction="withText|ifRoom" />
+            </menu>
+        </item>
+
+    </menu>

@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">PetShow</string>
+
+    <string name="title_activity_cadastrogeral">Cadastro Geral</string>
+    <string name="title_activity_cadastropet">Cadastro Pet</string>
+    <string name="title_activity_suporte_sms">Suporte SMS</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_item_inicio">Início</string>
+
+    <string name="title_action_sobre">Sobre</string>
+    <string name="sub_title_action_manual">Manual</string>
+    <string name="sub_title_action_suporte">Suporte</string>
+    <string name="sub_title_action_versao">Versão</string>
+    <string name="txt_versao">1.0.0</string>
+
+    <string name="txt_usuario">Usuário</string>
+    <string name="txt_senha">Senha</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_email">E-mail</string>
+    <string name="txt_sair">Sair</string>
+    <string name="txt_fechar">Fechar</string>
+    <string name="txt_sim">Sim</string>
+    <string name="txt_nao">Não</string>
+    <string name="txt_pesquisar">Pesquisar</string>
+    <string name="txt_add_pet">Adicionar Pet</string>
+    <string name="txt_editar">Editar</string>
+    <string name="txt_nome">Nome</string>
+    <string name="txt_tipo_pety">Tipo (Cachorro, gato, ...)</string>
+    <string name="txt_porte">Porte (Pequeno, médio ou grande)</string>
+    <string name="txt_peso">Peso</string>
+    <string name="txt_suporte_sms_msg">Inserir Mensagem</string>
+    <string name="txt_enviar">Enviar</string>
+
+    <string name="txt_salvar">Salvar</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="txt_excluir">Excluir</string>
+
+    <string name="dlg_title_suporte">Escolha opção para suporte</string>
+    <string name="msg_valida_escolha_opcao">Escolha alguma opção.</string>
+    <string name="dlg_title_sair">Sair</string>
+    <string name="msg_sair">Deseja realmente sair?</string>
+    <string name="msg_excluir">Deseja realmente excluir?</string>
+    <string name="msg_gravacao_sucesso">Gravação realizado com sucesso!</string>
+    <string name="msg_suporte_sms_msg_vazia">Mensagem vazia.</string>
+</resources>

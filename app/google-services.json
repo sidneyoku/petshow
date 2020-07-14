@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91801646911",
+    "firebase_url": "https://petshow-a8fe4.firebaseio.com",
+    "project_id": "petshow-a8fe4",
+    "storage_bucket": "petshow-a8fe4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91801646911:android:91a5aadc1ac45889ca858a",
+        "android_client_info": {
+          "package_name": "br.com.sidney.petshow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91801646911-os6t4ifuv8kec8nin13rhs13vi2092k0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtzFK9kl1Z-GZubakFsWhPE1Gv__iK-BA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91801646911-os6t4ifuv8kec8nin13rhs13vi2092k0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

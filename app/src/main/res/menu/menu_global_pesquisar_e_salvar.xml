@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_item_global_ps_pesquisar"
+        android:title="@string/txt_pesquisar"
+        android:icon="@android:drawable/ic_menu_search"
+        appcompat:showAsAction="collapseActionView|ifRoom"
+        appcompat:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <item
+        android:id="@+id/menu_item_global_ps_novo"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/txt_add_pet"/>
+</menu>
