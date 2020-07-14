@@ -65,6 +65,16 @@
             android:gravity="center"
             android:text="Não tem conta? cadastra-se!" />
 
+        <TextView
+            android:id="@+id/txt_activity_login_recuperarsenha"
+            android:onClick="recuperarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Recuperar minha senha" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

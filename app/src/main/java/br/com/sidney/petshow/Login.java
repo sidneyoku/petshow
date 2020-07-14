@@ -72,4 +72,9 @@ public class Login extends AppCompatActivity {
         Intent intent = new Intent(this, CadastroLogin.class);
         startActivity(intent);
     }
+
+    public void recuperarSenha(View view) {
+        Intent intent = new Intent(this, RecuperarSenha.class);
+        startActivity(intent);
+    }
 }

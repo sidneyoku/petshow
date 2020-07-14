@@ -4,6 +4,7 @@
     <string name="title_activity_cadastrogeral">Cadastro Geral</string>
     <string name="title_activity_cadastropet">Cadastro Pet</string>
     <string name="title_activity_suporte_sms">Suporte SMS</string>
+    <string name="title_activity_recuperarsenha">Recuperar Senha</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -37,6 +38,8 @@
     <string name="txt_salvar">Salvar</string>
     <string name="txt_cancelar">Cancelar</string>
     <string name="txt_excluir">Excluir</string>
+    <string name="txt_email_enviado">E-mail enviado!!</string>
+    <string name="txt_erro_email">Algo deu errado, confira o endereço de e-mail!</string>
 
     <string name="dlg_title_suporte">Escolha opção para suporte</string>
     <string name="msg_valida_escolha_opcao">Escolha alguma opção.</string>
@@ -45,4 +48,5 @@
     <string name="msg_excluir">Deseja realmente excluir?</string>
     <string name="msg_gravacao_sucesso">Gravação realizado com sucesso!</string>
     <string name="msg_suporte_sms_msg_vazia">Mensagem vazia.</string>
+
 </resources>
